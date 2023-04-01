@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'eugeny.borisov'
+version '1.0-SNAPSHOT'
+
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.beust:jcommander:1.82'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+}
+
+test {
+    useJUnitPlatform()
+}
